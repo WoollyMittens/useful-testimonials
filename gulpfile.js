@@ -68,6 +68,9 @@ gulp.task('markup', function () {
   gulp.src('src/php/**/*.php')
     .pipe(special())
     .pipe(gulp.dest('dist/php/'));
+  gulp.src('src/json/**/*.js')
+    .pipe(special())
+    .pipe(gulp.dest('dist/json/'));
 });
 
 gulp.task('assets', function () {
@@ -80,7 +83,7 @@ gulp.task('assets', function () {
 });
 
 gulp.task('images', function () {
-  gulp.src(['src/img/**/*.png', 'src/img/**/*.jpg', 'src/img/**/*.svg'])
+  gulp.src(['src/img/**/*.gif', 'src/img/**/*.png', 'src/img/**/*.jpg', 'src/img/**/*.svg'])
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: true}],
