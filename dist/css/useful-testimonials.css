@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*
+Constants
+*/
+/*
+Hides text in the margin
+*/
+/*
+Turns a button into an icon
+*/
+/*
+Centres a graphic or glyph inside an icon
+*/
+/*
+Offers both the pixel and rem value of a single property
+*/
+/*
+Offers both the pixel and rem values of a shorthand property
+*/
+/*
+Offers the text size as both the pixel and rem value
+*/
+/*
+Adds vendor prefixed to a property
+*/
+/*
+Applies the "clearfix" hack to a container with floating content
+*/
+/*
+	Reference Styling for simple scrolling testimonials
+*/
+.testimonials {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .testimonials * {
+    box-sizing: border-box; }
+  .testimonials blockquote {
+    border-left: solid 5px #ccc;
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 30px 60px;
+    transition: left ease 1s, opacity ease 1s;
+    left: 100%;
+    opacity: 0;
+    quotes: "“" "”" "‘" "’"; }
+    .testimonials blockquote p {
+      font-size: 2em;
+      line-height: 1.3; }
+    .testimonials blockquote footer {
+      font-size: 1em; }
+      .testimonials blockquote footer b {
+        font-size: 0.8em;
+        display: block; }
+    .testimonials blockquote:before,
+    .testimonials blockquote:after {
+      color: #ccc;
+      font-size: 4em;
+      position: absolute;
+      line-height: 1; }
+    .testimonials blockquote:before {
+      content: open-quote;
+      left: 0.5em;
+      top: 0.5em; }
+    .testimonials blockquote:after {
+      content: close-quote;
+      right: 0.5em;
+      bottom: 0.5em; }
+    .testimonials blockquote.testimonial-0 {
+      left: 100%;
+      opacity: 0; }
+    .testimonials blockquote.testimonial-1 {
+      left: 0%;
+      opacity: 1; }
+    .testimonials blockquote.testimonial-2 {
+      left: -100%;
+      opacity: 0; }
+  .testimonials-chevrons a {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    margin: -1em 0;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    text-indent: 3em; }
+    .testimonials-chevrons a.testimonials-prev {
+      background-image: url(../img/symbol_backward.svg);
+      left: 1em; }
+    .testimonials-chevrons a.testimonials-next {
+      background-image: url(../img/symbol_foward.svg);
+      right: 1em; }
+  .testimonials-pips {
+    display: block;
+    position: absolute;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; }
+    .testimonials-pips a {
+      border: solid 2px #000;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      overflow: hidden;
+      text-indent: 2em;
+      border-radius: 50%;
+      margin: 0 0.3em; }
+      .testimonials-pips a.testimonials-pips-active {
+        background-color: #000; }
