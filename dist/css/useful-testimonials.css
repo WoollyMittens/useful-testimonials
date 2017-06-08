@@ -34,6 +34,7 @@ Applies the "clearfix" hack to a container with floating content
   width: 100%;
   overflow: hidden; }
   .testimonials * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; }
   .testimonials blockquote {
     border-left: solid 5px #ccc;
@@ -42,10 +43,14 @@ Applies the "clearfix" hack to a container with floating content
     width: 100%;
     margin: 0;
     padding: 30px 60px;
+    -webkit-transition: left ease 1s, opacity ease 1s;
     transition: left ease 1s, opacity ease 1s;
     left: 100%;
     opacity: 0;
-    quotes: "“" "”" "‘" "’"; }
+    quotes: "“" "”" "‘" "’";
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%); }
     .testimonials blockquote p {
       font-size: 2em;
       line-height: 1.3; }
@@ -54,8 +59,7 @@ Applies the "clearfix" hack to a container with floating content
       .testimonials blockquote footer b {
         font-size: 0.8em;
         display: block; }
-    .testimonials blockquote:before,
-    .testimonials blockquote:after {
+    .testimonials blockquote:before, .testimonials blockquote:after {
       color: #ccc;
       font-size: 4em;
       position: absolute;

@@ -56,7 +56,7 @@ useful.Testimonials.prototype.Touch = function () {
 
 // return as a require.js module
 if (typeof module !== 'undefined') {
-	exports = module.exports = useful.Testimonials.Pips;
+	exports = module.exports = useful.Testimonials.Touch;
 }
 
 
