@@ -1,4 +1,4 @@
-# useful.testimonials.js: Simple scrolling testimonials
+# testimonials.js: Simple scrolling testimonials
 
 Turn a list of testimonials into a slideshow.
 
@@ -9,21 +9,13 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-testimonials
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/useful-testimonials.css"/>
+<link rel="stylesheet" href="./css/testimonials.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-testimonials.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/testimonials.js"></script>
 ```
 
 ## How to start the script
@@ -41,7 +33,7 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 **...** - For proper animation there should ideally be three or more quotes.
 
 ```javascript
-var testimonials = new useful.Testimonials().init({
+var testimonials = new Testimonials({
 	'element': document.querySelector('.testimonials'),
 	'tag': 'blockquote',
 	'pips': true,

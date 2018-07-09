@@ -1,21 +1,8 @@
-/*
-	Source:
-	van Creij, Maurice (2014). "useful.testimonials.js: Simple scrolling testimonials.", version 20151215, http://www.woollymittens.nl/.
-
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-*/
-
-// create the constructor if needed
-var useful = useful || {};
-useful.Testimonials = useful.Testimonials || function () {};
-
-// extend the prototype with the slides component
-useful.Testimonials.prototype.Slides = function () {
+// extend the class
+Testimonials.prototype.Slides = function (context) {
 
 	// PROPERTIES
 
-	"use strict";
 	this.context = null;
 	this.config = {};
 
@@ -33,8 +20,6 @@ useful.Testimonials.prototype.Slides = function () {
 		this.cycle();
 		// set the event handler for resizing
 		window.addEventListener('resize', this.onResize.bind(this));
-		// return the object
-		return this;
 	};
 
 	this.cycle = function () {
@@ -76,20 +61,6 @@ useful.Testimonials.prototype.Slides = function () {
 		this.config.element.style.minHeight = maxHeight + 'px';
 	};
 
+
+	this.init(context);
 };
-
-// return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = useful.Testimonials.Slides;
-}
-
-
-
-
-
-
-
-
-
-
-/* EOF */

@@ -1,21 +1,8 @@
-/*
-	Source:
-	van Creij, Maurice (2014). "useful.testimonials.js: Simple scrolling testimonials.", version 20151215, http://www.woollymittens.nl/.
-
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-*/
-
-// create the constructor if needed
-var useful = useful || {};
-useful.Testimonials = useful.Testimonials || function () {};
-
-// extend the prototype with the chevrons component
-useful.Testimonials.prototype.Chevrons = function () {
+// extend the class
+Testimonials.prototype.Chevrons = function (context) {
 
 	// PROPERTIES
 
-	"use strict";
 	this.context = null;
 	this.config = {};
 	this.nav = null;
@@ -30,8 +17,6 @@ useful.Testimonials.prototype.Chevrons = function () {
 		this.config = context.config;
 		// add the navigation container if desired
 		if (this.config.chevrons) { this.addNavigation(); }
-		// return the object
-		return this;
 	};
 
 	this.addNavigation = function () {
@@ -71,20 +56,6 @@ useful.Testimonials.prototype.Chevrons = function () {
 		this.context.cycleBy(-1);
 	};
 
+	this.init(context);
+
 };
-
-// return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = useful.Testimonials.Chevrons;
-}
-
-
-
-
-
-
-
-
-
-
-/* EOF */
