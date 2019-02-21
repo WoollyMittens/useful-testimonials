@@ -36,6 +36,5 @@ var Testimonials = function (config) {
 };
 
 // return as a require.js module
-if (typeof module !== 'undefined') {
-	exports = module.exports = Testimonials;
-}
+if (typeof define != 'undefined') define(['testimonials'], function () { return Testimonials });
+if (typeof module != 'undefined') module.exports = Testimonials;
