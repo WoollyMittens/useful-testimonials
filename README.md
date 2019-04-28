@@ -9,13 +9,32 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-testimonials
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/testimonials.css"/>
+<link rel="stylesheet" href="css/testimonials.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/testimonials.js"></script>
+<script src="lib/gestures.js"></script>
+<script src="js/testimonials.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'lib/gestures.js',
+	'js/testimonials.js'
+], function(Gestures, Testimonials) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var Gestures = require('lib/gestures.js');
+var Testimonials = require('js/testimonials.js');
 ```
 
 ## How to start the script
