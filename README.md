@@ -2,8 +2,6 @@
 
 Turn a list of testimonials into a slideshow.
 
-Try the <a href="http://www.woollymittens.nl/default.php?url=useful-testimonials">demo</a>.
-
 ## How to include the script
 
 The stylesheet is best included in the header of the document.
